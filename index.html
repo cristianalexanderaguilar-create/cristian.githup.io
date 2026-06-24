@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cristian Alexander Aguilar</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100vh;
+    overflow-x:hidden;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:white;
+    background:black;
+}
+
+/* VIDEO DE FONDO */
+
+.bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:0;
+}
+
+/* CAPA OSCURA */
+
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.75)
+    );
+    z-index:1;
+}
+
+/* CONTENEDOR */
+
+.main-container{
+    position:relative;
+    z-index:2;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+/* FOTO */
+
+.profile-pic{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid rgba(255,255,255,.8);
+
+    box-shadow:
+    0 0 30px rgba(255,255,255,.15),
+    0 20px 40px rgba(0,0,0,.45);
+
+    margin-bottom:25px;
+}
+
+/* TITULOS */
+
+.profile-title{
+    font-size:2.2rem;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:8px;
+}
+
+.profile-subtitle{
+    color:#d9d9d9;
+    font-size:1rem;
+    margin-bottom:35px;
+    font-weight:300;
+}
+
+/* BOTONES */
+
+.links-wrapper{
+    width:100%;
+    max-width:380px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.btn-link{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    padding:16px;
+
+    text-decoration:none;
+    color:white;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    transition:all .3s ease;
+
+    font-size:1rem;
+    font-weight:600;
+    letter-spacing:.5px;
+}
+
+.btn-link:hover{
+
+    transform:translateY(-3px);
+
+    background:rgba(255,255,255,.18);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.35);
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:30px;
+    font-size:.8rem;
+    color:#bfbfbf;
+    opacity:.85;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:480px){
+
+    .profile-title{
+        font-size:1.8rem;
+    }
+
+    .profile-pic{
+        width:120px;
+        height:120px;
+    }
+
+    .btn-link{
+        padding:15px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<video autoplay muted loop playsinline preload="auto" class="bg-video" poster="perfil.jpg">
+    <source src="gym-video.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="main-container">
+
+<img src="perfil.jpg"
+     alt="Cristian Alexander Aguilar"
+     class="profile-pic">
+
+<h1 class="profile-title">
+    Cristian Alexander Aguilar
+</h1>
+
+<p class="profile-subtitle">
+    Gym &bull; IA &bull; Contenido
+</p>
+
+<div class="links-wrapper">
+
+    <a href="https://www.instagram.com/cristiann_raw/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn-link">
+       Instagram
+    </a>
+
+    <a href="https://www.tiktok.com/@cristiann_raw"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn-link">
+       TikTok
+    </a>
+
+    <a href="https://www.youtube.com/@alexanderaguilar3883"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn-link">
+       YouTube
+    </a>
+
+    <a href="https://www.facebook.com/cristianalexanderam/?locale=es_LA"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn-link">
+       Facebook
+    </a>
+
+</div>
+
+<div class="footer">
+    Puebla, MX
+</div>
+
+</div>
+
+</body>
+</html>
